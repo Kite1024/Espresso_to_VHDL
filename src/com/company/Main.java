@@ -19,7 +19,8 @@ public class Main {
             input = input.replaceAll("\\|", " OR ");
             input = input.replaceAll("\\&", " AND ");
             input = input.replaceAll("!(\\w*)\\s", "(NOT $1) ");
-			input = input.replaceAll("!(\\w*)[\\&\\|\\)]", "(NOT $1)");
+			input = input.replaceAll("!(\\w*)\\)", "(NOT $1))");
+			input = input.replaceAll("!(\\w*)[\\&\\|]", "(NOT $1)");
 			System.out.println(input);
         } catch (Exception e) {
         	e.printStackTrace();
